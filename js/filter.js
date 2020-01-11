@@ -1,13 +1,14 @@
-let liElements = document.getElementsByTagName("li");
-
-for( let i = 0 ; i < liElements.length ;i++){
-    console.log(liElements[i].textContent);
-}
-
 function onFilterInput(){
-    let getValues = document.getElementById("inputFilterId").value;
-    console.log(getValues);
+    let getValues = document.querySelector("#inputFilterId");
+    let filter = getValues .value.toUpperCase();
+    let liElements = document.getElementsByTagName("li");
+    let textValue;
+    
+    for( let i = 0 ; i < liElements.length ;i++){
+        textValue = liElements[i].textContent || liElements[i].innerText;
+        console.log(textValue.indexOf(filter));
+    }
 }
 
-document.addEventListener('keypress',onFilterInput)
+document.addEventListener('keyup',onFilterInput)
 
