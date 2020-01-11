@@ -5,8 +5,7 @@ for( let i = 0 ; i < liElements.length ;i++){
 }
 
 function onFilterInput(){
-    let getValues = document.getElementById("inputFilterId");
-    // let filter = getValues.value.toUpperCase();
+    let getValues = document.getElementById("inputFilterId").value;
     console.log(getValues);
 }
 
